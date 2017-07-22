@@ -1,0 +1,152 @@
+/*reset */
+body{
+	padding: 0;
+	margin: 0;
+}
+
+.container{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.col-sw-2{
+	width: 20%;
+}
+
+.col-sw-2i{
+	width: 25%;
+}
+
+/*layout */
+header{
+	padding: 40px 0;
+}
+
+header ul, header li{
+	list-style-type: none;
+	text-decoration: none;
+}
+
+header ul li{
+	display: inline-block;
+	margin: 0 35px;
+}
+
+#carousel_container{
+	height: 400px;
+	width: 100%;
+}
+
+#carousel_container img,
+.card_head img
+{
+	width: 100%;
+	height: 100%;
+}
+
+#card_container{
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+footer{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background: #DDDDDD;
+}
+
+/*Card component*/
+.card .card_head{
+	height: 270px;
+	position: relative;
+	overflow: hidden;
+	transition: all 1s cubic-bezier(0.4, 0, 0.88, 0.48);
+}
+
+.card_head .overlay{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.75);
+    transition: all ease-in 1s cubic-bezier(0.4, 0, 0.88, 0.48);
+    transform: translateX(-100%);
+}
+
+.card:hover .overlay{
+	transform: translateX(0);
+}
+
+.col-sw-3i .box{
+	width: 100px;
+	height: 90px;
+	text-align: center;
+}
+
+.box .icons a img{
+	width: 34px;
+	font-size: 50px;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.border-r100{
+	border-radius: 100%;
+}
+
+.carousel.horizontal{
+	width: 100%;
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+}
+
+.carousel .items{
+	animation: slider 20s infinite;
+	display: flex;
+	flex-direction: row;
+	width: 100%
+	height: 100%;
+}
+
+.items .item{
+	margin: 0;
+	flex: 0 0 100%;
+	position: relative;
+}
+
+.overlay{
+	position: absolute;
+	color: #FFF;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.85);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+@keyframes slider{
+	0%, 18.75%{
+		moz-transform: translateX(0);
+		web-kit-transform: translateX(0);
+		transform: translateX(0);
+	}
+	25%, 43.75%{
+		transform: translateX(-100%);
+	}
+	50%, 68.75%{
+		transform: translateX(-200%);
+	}
+	75%, 93.75%{
+		transform: translateX(-300%);
+	}
+	100%{
+		transform: translateX(0);
+	}
+}
